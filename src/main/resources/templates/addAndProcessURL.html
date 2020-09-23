@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>URL Processor</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<h1>Shorten Your URL</h1>
+
+<form action="#" th:action="@{/addURL}" th:object="${uniqueLink}" method="post">
+    <p>
+        Long URL: <input type="text" th:field="*{longUrl}">
+    </p>
+
+    <p>
+        <input type="submit" value="Submit"/> <input type="reset" value="Reset">
+    </p>
+</form>
+
+</body>
+</html>

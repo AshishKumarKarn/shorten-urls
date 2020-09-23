@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Show Processed Result</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<h1>Result</h1>
+
+<p th:text="'Your long URL: ' + ${uniqueLink.longUrl}"></p>
+<p th:text="'Short URL: ' + ${uniqueLink.shortUrl}"></p>
+<a href="/addURL">Submit another URL</a>
+<br/>
+<form action="#" th:action="@{/getBackLongURL}" th:object="${uniqueLink}" method="get">
+    <p>
+        Short URL: <input type="text" th:field="*{shortUrl}">
+    </p>
+
+    <p>
+        <input type="submit" value="Submit"/> <input type="reset" value="Reset">
+    </p>
+</form>
+
+</body>
+</html>
