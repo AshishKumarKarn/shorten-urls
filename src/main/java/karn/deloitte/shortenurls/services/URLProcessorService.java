@@ -41,7 +41,6 @@ public class URLProcessorService implements IURLProcessorService {
     @Override
     public String getOriginalUrl(String shortUrl) {
         final long id = urlEncoderDecoderService.encodeUrlToId(shortUrl);
-        System.out.println(id);
         return iUniqueLinkRepo.findByLinkId(id);
     }
 
