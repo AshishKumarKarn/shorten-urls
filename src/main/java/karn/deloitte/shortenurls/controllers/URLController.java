@@ -54,7 +54,7 @@ public class URLController {
 
     /**
      *
-     * Method to map all incoming GET requests to get the long URL back from Application
+     * Method to map all incoming on '/getBackLongURL' GET requests to get the long URL back from Application
      * using the shortUrl.
      *
      * */
