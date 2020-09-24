@@ -52,6 +52,12 @@ public class URLController {
         return RESULT;
     }
 
+    /**
+     *
+     * Method to map all incoming GET requests to get the long URL back from Application
+     * using the shortUrl.
+     *
+     * */
     @GetMapping("/getBackLongURL")
     public ResponseEntity<String> getBackLongURL(@RequestParam("shortUrl") String shortUrl) {
         LOGGER.info("shortUrl:>>{}",shortUrl);
